@@ -15,7 +15,7 @@ window.onload = function() {
         //htｍlのid:answerを取得して変数answerに代入
         var answer = document.getElementById('answer');
         //JSONの形式でanswer.valueに返ってきた値を入れる
-        answer.value = JSON.parse(xhr.responseText);
+        answer.value = JSON.parse(this.responseText);
       }
     }
   };
@@ -29,4 +29,4 @@ function post() {
   // フォームに入力した値をリクエストとして設定
   var request = "arg1=" + arg1.value + "&arg2=" + arg2.value;
   xhr.send(request);
-};
+}
